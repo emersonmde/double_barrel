@@ -1,3 +1,3 @@
 # double_barrel
-A 6502 emulator
+A (wip) 6502 emulator
 
