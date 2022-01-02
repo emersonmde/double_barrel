@@ -1,5 +1,19 @@
 use crate::io::InputOutputModule;
 
+/*
+0x0000	0000 0000 0000 0000     RAM Start
+0x3FFF  0011 1111 1111 1111     RAM End
+
+0x6000  0110 0000 0000 0000     IO Start
+0x600F  0110 0000 0000 FFFF     IO End
+
+0x7fff	0111 1111 1111 1111
+0x8000	1000 0000 0000 0000	    EEPROM Start
+
+0xfffc  1111 1111 1111 1100	    Code start low byte
+0xfffd  1111 1111 1111 1101	    Code start end byte
+0xffff	1111 1111 1111 1111	    EEPROM End
+ */
 pub struct MemoryManagementUnit {
     // TODO: Find a way to change to arrays
     ram: Vec<u8>,
